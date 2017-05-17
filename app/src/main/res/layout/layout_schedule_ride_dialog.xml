@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="5dp">
+
+    <TextView
+        android:id="@+id/textViewScheduleRideText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Schedule a Ride"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:layout_margin="20dp"
+        android:typeface="normal"
+        android:textSize="@dimen/schedule_ride_title_text_size"
+        />
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:background="@color/primary_text"
+        android:layout_height="0.1dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewScheduleDateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fri,May 5"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:layout_margin="20dp"
+        android:textSize="@dimen/date_and_time_text_size"/>
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:background="@color/primary_text"
+        android:layout_height="0.1dp"/>
+
+    <TextView
+        android:id="@+id/textViewScheduleTimeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="11:50AM - 12:05PM"
+        android:textColor="@color/primary_text"
+        android:textAlignment="center"
+        android:textSize="@dimen/date_and_time_text_size"
+        android:layout_margin="20dp"
+        />
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:background="@color/primary_text"
+        android:layout_height="0.1dp"/>
+
+
+    <Button
+        android:id="@+id/buttonScheduleForPickUp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/schedule_ride_button_height"
+        android:text="SET PICKUP WINDOW"
+        android:textColor="@android:color/white"
+        android:background="@color/primary_text"
+        android:textSize="@dimen/schedule_button_text_size"
+        android:layout_margin="25dp"/>
+
+</LinearLayout>

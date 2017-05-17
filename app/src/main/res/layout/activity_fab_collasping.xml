@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/coordinatorlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context="com.enest.pc_68.pathfinder.FabCollasping">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        style="@style/MainAppBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/MainToolbarStyle"
+            android:layout_width="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_collapseMode="pin"
+            app:title="@string/title_main" />
+
+    </android.support.design.widget.AppBarLayout>
+    <FrameLayout
+        android:id="@+id/dummy_framelayout_replacing_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:fitsSystemWindows="true"/>
+
+<!--
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/anchor_point"
+        android:background="@color/accent"
+        app:layout_behavior="@string/BackDropBottomSheetBehavior"
+        android:fitsSystemWindows="true">
+    </android.support.v4.view.ViewPager>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:behavior_peekHeight="@dimen/bottom_sheet_peek_height"
+        android:id="@+id/bottom_sheet"
+        app:layout_behavior="@string/BottomSheetBehaviorGoogleMapsLike"
+        app:anchorPoint="@dimen/anchor_point"
+        app:behavior_hideable="true"
+        android:fitsSystemWindows="true">
+
+        <include
+            layout="@layout/layout_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"/>
+    </android.support.v4.widget.NestedScrollView>-->
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <include layout="@layout/layout_messages" />
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+    <com.enest.pc_68.pathfinder.bscl.BottomSheetCoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        app:appBarLayout="@+id/bottom_sheet_appbar"
+        app:behavior_peekHeight="?attr/actionBarSize"
+        app:layout_behavior="@string/coordinator_layout_bottom_sheet_behavior">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/bottom_sheet_appbar"
+            style="@style/BottomSheetAppBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@color/laenger10" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/bottom_sheet_toolbar"
+                    style="@style/BottomSheetToolbarStyle"
+                    android:layout_width="match_parent"
+                    app:title="@string/title_bottom_sheet" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/laenger20"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include layout="@layout/layout_messages" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.enest.pc_68.pathfinder.bscl.BottomSheetCoordinatorLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

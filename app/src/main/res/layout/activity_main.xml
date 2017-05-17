@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.enest.pc_68.pathfinder.MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@android:color/white"
+        android:contentInsetStart="0dp"
+        android:contentInsetLeft="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <RelativeLayout
+            android:id="@+id/layoutsourceLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <ImageView
+                android:id="@+id/imageviewcurrentlocatin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_my_location"
+                android:layout_centerVertical="true"
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/autoCompleteviewSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:layout_toRightOf="@+id/imageviewcurrentlocatin">
+                <fragment
+                    android:id="@+id/place_autocomplete_fragmentsource"
+                    android:name="com.enest.pc_68.pathfinder.CustomPlaceAutoCompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutsourceLocation"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            >
+            <ImageView
+                android:id="@+id/imageViewLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_location_on"
+                />
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/autoCompleteViewDestination"
+                android:layout_toRightOf="@+id/imageViewLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                >
+                <fragment
+                    android:id="@+id/place_autocomplete_fragmentdestination"
+                    android:name="com.enest.pc_68.pathfinder.CustomPlaceAutoCompleteFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/map"
+        tools:context=".MainActivity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:id="@+id/central_marker"
+            android:src="@drawable/ic_loaction_pin_red"/>
+
+
+        </RelativeLayout>
+</RelativeLayout>
+
+
+    <com.enest.pc_68.pathfinder.bscl.BottomSheetCoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="16dp"
+        android:orientation="vertical"
+        app:appBarLayout="@+id/bottom_sheet_appbar"
+        app:behavior_peekHeight="?attr/actionBarSize"
+        app:layout_behavior="@string/coordinator_layout_bottom_sheet_behavior">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/bottom_sheet_appbar"
+            style="@style/BottomSheetAppBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@color/laenger10" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/bottom_sheet_toolbar"
+                    style="@style/BottomSheetToolbarStyle"
+                    android:layout_width="match_parent"
+                    app:title="@string/title_bottom_sheet" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/laenger20"
+            android:scrollbars="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <include layout="@layout/layout_messages" />
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.enest.pc_68.pathfinder.bscl.BottomSheetCoordinatorLayout>
+</android.support.design.widget.CoordinatorLayout>

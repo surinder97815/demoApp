@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/textViewPopular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp"
+        android:text="Popular"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/large_text_size" />
+
+    <LinearLayout
+        android:id="@+id/layoutCarAndLableHolder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewPopular"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp">
+
+        <LinearLayout
+            android:id="@+id/layOutOne"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/toggleButtonViewCarTypeOne"
+                android:layout_width="@dimen/car_image_size"
+                android:layout_height="@dimen/car_image_size"
+                android:background="@drawable/toggle_view"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:checked="false"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="uberGo"
+                android:layout_gravity="center"
+                android:textSize="@dimen/car_name_text_size"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layOutTwo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/layOutOne"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/toggleButtonCarTypeTwo"
+                android:layout_width="@dimen/car_image_size"
+                android:layout_height="@dimen/car_image_size"
+                android:src="@drawable/ic_car_blue"
+                android:background="@drawable/toggle_view"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="uberX"
+                android:layout_gravity="center"
+                android:textSize="@dimen/car_name_text_size"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toRightOf="@+id/layOutTwo"
+            android:orientation="vertical">
+
+            <ToggleButton
+                android:id="@+id/toggleButtonCarTypeThree"
+                android:layout_width="@dimen/car_image_size"
+                android:layout_height="@dimen/car_image_size"
+                android:src="@drawable/ic_car_blue"
+                android:background="@drawable/toggle_view"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:checked="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="uberXL"
+                android:layout_gravity="center"
+                android:textSize="@dimen/car_name_text_size"
+                android:textColor="@color/primary_text"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/layoutCarAndLableHolder"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@android:color/darker_gray"></View>
+
+    <RelativeLayout
+        android:id="@+id/layoutPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewDivider"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imageViewPaytmImage"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:background="@color/primary_light"
+            android:src="@drawable/ic_paytm_logo" />
+
+        <TextView
+            android:id="@+id/textViewPayTmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/imageViewPaytmImage"
+            android:paddingLeft="10dp"
+            android:text="PayTm"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/small_text_size" />
+
+        <ImageView
+            android:id="@+id/imageViewPerson"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textViewNoOfPeople"
+            android:paddingRight="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_people_outline" />
+
+        <TextView
+            android:id="@+id/textViewNoOfPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="1-4"
+            android:textColor="#9e9e9e" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutPerson"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/buttonPickRequest"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/buttonPickRequestTwo"
+            android:background="@android:color/black"
+            android:text="Request Pickup here"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <ImageButton
+            android:id="@+id/buttonPickRequestTwo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_schedule_button"
+            android:src="@drawable/ic_schedule" />
+    </RelativeLayout>
+</RelativeLayout>
+

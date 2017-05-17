@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Google Path Finder</string>
+    <string name="Api_key">AIzaSyBboL9VxiveE1Z3dfBR43ZM3_jO1AHoYRQ</string>
+    <!--<string name="Api_key">AIzaSyAiwZT6g1DGwczk9aTo2uBaDSyNFVxyOCg</string>-->
+    <!--<string name="Api_key">AIzaSyAiFpFd85eMtfbvmVNEYuNds5TEF9FjIPI</string>-->
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="work_business_location">Location</string>
+    <string name="no_geocoder_available">No geocoder available</string>
+
+
+    <string name="key_binding_default_toolbar_name">Messages</string>
+
+
+    <string name="coordinator_layout_bottom_sheet_behavior" translatable="false">com.enest.pc_68.pathfinder.bscl.CoordinatorLayoutBottomSheetBehavior</string>
+
+    <string name="title_bottom_sheet">Bottom Sheet</string>
+    <string name="title_main">Main Toolbar</string>
+
+</resources>

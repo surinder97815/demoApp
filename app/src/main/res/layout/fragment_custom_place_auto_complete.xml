@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.enest.pc_68.pathfinder.CustomPlaceAutoCompleteFragment">
+
+    <EditText
+        android:id="@+id/editWorkLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:hint="@string/work_business_location"
+        android:singleLine="true"
+        android:lines="1"
+        android:layout_centerVertical="true"
+       android:layout_margin="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/txt_14sp"
+        android:focusable="false"/>
+
+</LinearLayout>

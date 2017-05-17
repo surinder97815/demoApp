@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_back_button_margin">5dp</dimen>
+    <dimen name="txt_14sp">15sp</dimen>
+    <dimen name="large_text_size">25sp</dimen>
+    <dimen name="small_text_size">12sp</dimen>
+    <dimen name="more_large_text_size">35sp</dimen>
+    <dimen name="date_and_time_text_size">20sp</dimen>
+    <dimen name="schedule_ride_title_text_size">25sp</dimen>
+    <dimen name="schedule_ride_button_height">60dp</dimen>
+    <dimen name="schedule_button_text_size">18sp</dimen>
+
+    <dimen name="car_image_size">90dp</dimen>
+    <dimen name="car_name_text_size">17sp</dimen>
+
+    
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="anchor_point">570dp</dimen>
+    <dimen name="bottom_sheet_peek_height">?attr/actionBarSize</dimen>
+    <dimen name="card_margin">10dp</dimen>
+
+
+</resources>
